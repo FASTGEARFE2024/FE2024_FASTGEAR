@@ -107,7 +107,7 @@ To go around the obstacles, our robot looks at x and y coordinates of the obstac
 ## Open Race
 For open race we chose the Classroom application because we realized that the sensor's reading speed is very important in wall following, and we conducted a test. In this test, we increased the value of the variable X, initially set to zero, by 1 every second for 5 seconds using both the Classroom Application and the EV3-G program, and finally displayed the value of X on the screen. In this test, the code written with the Classroom application resulted in 33646, while the code executed with the EV3-G program resulted in 21732. This showed us that the EV3 responded faster with the code written in the Classroom application, and indeed we observed that it turned more quickly after reading the value from the Ultrasonic sensor.
 
-In our code we have a function called "TURN". First, we reset the degree of motor A. Motor A is our steering mech.
+In our code we have a function called "TURN". First, we reset the degree of motor A. Motor A is our steering mech. Then we set our movement motors to B and C. After that we set the variable "round" to 0. Every time our robot does a turn in one of the 4 corners of the track, round variable increases by 1. When the round variable becomes 12, Our robot makes 1 more turn and then stops.
 
 ## Obstacle Race
 The code for the obstacle race is mostly the same as the code we used in open race. But there are differences. First of all, because we are trying not to hit obstacles, We sacrifice the robots speed in order to navigate around the obstacles better.
