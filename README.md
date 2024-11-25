@@ -105,19 +105,9 @@ To go around the obstacles, our robot looks at x and y coordinates of the obstac
 
 ![alt text](https://github.com/user-attachments/assets/b257af2f-facd-4b6f-86b5-3247d9d6c7da)
 ## Open Race
-We first start by making our steering mechs angle 0. Through this we can make our robot start in a straight line, and then we reset our motor rotation and gyro sensor's value. Our robot first checks if there are any colored lines, if there aren't, the robot starts to move. When it reaches the lines at the corners of the area, Through its color sensor, it can understand whether to turn clockwise or counterclockwise. Sometimes color sensor detects wrong color values. Because of this we made it so if our color sensor detects:
+For open race we chose the Classroom application because we realized that the sensor's reading speed is very important in wall following, and we conducted a test. In this test, we increased the value of the variable X, initially set to zero, by 1 every second for 5 seconds using both the Classroom Application and the EV3-G program, and finally displayed the value of X on the screen. In this test, the code written with the Classroom application resulted in 33646, while the code executed with the EV3-G program resulted in 21732. This showed us that the EV3 responded faster with the code written in the Classroom application, and indeed we observed that it turned more quickly after reading the value from the Ultrasonic sensor.
 
-Red => it turns clockwise
-
-Yellow => it turns clockwise
-
-Brown => it turns clockwise
-
-Blue => it turns counterclockwise
-
-Black => it turns counterclockwise
-
-After our robot turns, code increases the variable called "rounds" by 1. When this variable reaches 12, this means our robot finished 3 rounds. While our robot is not detecting any lines, It tries to center the lane. It does this using the "rotation" variable. Rotation variable increases by 30 if our robot is closer to the wall than 20 cm. if rotation variable increase, our robot starts to move away from the wall. When the rounds reaches 12, Our robot increases its speed and turns to the lane for 3 rotations, this allows our robot to finish in the lane.
+In our code we have a function called "TURN". First, we reset the degree of motor A. Motor A is our steering mech.
 
 ## Obstacle Race
 The code for the obstacle race is mostly the same as the code we used in open race. But there are differences. First of all, because we are trying not to hit obstacles, We sacrifice the robots speed in order to navigate around the obstacles better.
