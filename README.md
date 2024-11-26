@@ -116,8 +116,12 @@ When the ultrasonic sensor sees less than 200 cm, the steering mech stops. If ul
 ![3e32662d-19e8-409a-87cb-9dde82bc2513](https://github.com/user-attachments/assets/84e3fed7-ddce-4476-a3d4-287402f26824)
 
 ## Obstacle Race
-The code for the obstacle race is mostly the same as the code we used in open race. But there are differences. First of all, because we are trying not to hit obstacles, We sacrifice the robots speed in order to navigate around the obstacles better.
-Second of all, before checking if there are any colored lines, our robot uses the pixycam to see if there are any obstacles. If there are, our code uses PID to center the obstacle, Because we center the obstacle pixycam will be able to identify the color of the obstacle without issues. After pixycam identifies the color, if the color is red: It turns right. If the color is green: It turns left. Robot continues turning until it cant see the color that it saw. While all of this is happening, our robot periodically checks if it detects any colored lines.
+Even though we wanted to use EV3 Classroom rather than EV3-G, we used EV3-G to use Pixycam's code blocks.
+In obstacle race, our code first resets gyro sensor. After that it sets a variable called "round" to 0. After that the code waits until we press left or right buttons on the hub. If we press left button, we move counterclockwise at corners of the lane. If we press right button we move clockwise at corners of the lane. Our code then checks if there are any visible obstacles, if it sees one, then it checks its position on the x axis. If its position is more than 128, it truns left for -15 degrees. If its position is not more than 128, it turns right for 25 degrees. Through this our robot centers the obstacle. Because we center the obstacle, our turns can be made easier. Our robot continues to center the obstacle until the visible area of the obstacle is more than 2500. Then, our robot checks if the obstacle that it sees is red or green. if its red, it turns left for 12.5 cm, goes straight for 5 cm and goes right for 12.5 cm. Through this, our robot always centers its lane. If the color of the obstacle is green, it turns right for 12.5 cm, goes straight for 5 cm and goes left for 12.5 cm.
+
+If our robot did not see an obstacle, it centers itself and goes straight. Because there is a possibility that it deviates from its path, we use a PD with the gyro sensor.
+
+If our robot sees blue or orange lines, This means that the robot is at one of the corners of the lane. When that happens our robot turns for 60 degrees. and every 20 degrees it checks if pixycam can see an obstacle.
 
 
 # <hr/>
