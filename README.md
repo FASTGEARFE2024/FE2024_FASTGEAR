@@ -122,6 +122,15 @@ In obstacle race, our code first resets gyro sensor. After that it sets a variab
 If our robot did not see an obstacle, it centers itself and goes straight. Because there is a possibility that it deviates from its path, we use a PD with the gyro sensor.
 
 If our robot sees blue or orange lines, It increases the round variable by 1.  When that happens our robot turns for 60 degrees. and every 20 degrees (while it turns) it checks if pixycam can see an obstacle.
+![Ekran Görüntüsü (1)](https://github.com/user-attachments/assets/f6c176f6-cfc9-45e2-ac65-2ae93ddd413c)
+![Ekran Görüntüsü (2)](https://github.com/user-attachments/assets/80ef317d-897d-4d25-904c-af04b47a32b8)
+![Ekran Görüntüsü (3)](https://github.com/user-attachments/assets/95ed3a60-6bd0-4791-92df-64dfbc89fe65)
+![Ekran Görüntüsü (4)](https://github.com/user-attachments/assets/0160fdcb-11c3-42fb-a5c0-830bd2c7b7b4)
+![Ekran Görüntüsü (5)](https://github.com/user-attachments/assets/9be5bacd-a781-4025-beca-7eea5bee1cd4)
+![Ekran Görüntüsü (6)](https://github.com/user-attachments/assets/cea2d6e5-9a55-4876-823c-02c63e002d06)
+![Ekran Görüntüsü (7)](https://github.com/user-attachments/assets/c11cbe71-65ff-4004-89c0-9bb4cf5e6620)
+![Ekran Görüntüsü (8)](https://github.com/user-attachments/assets/e817777b-b9eb-4c9f-88d9-0005612b22b7)
+![Ekran Görüntüsü (9)](https://github.com/user-attachments/assets/f2260a5f-d1fe-4b82-9dc1-5269d7584a4d)
 
 
 # <hr/>
