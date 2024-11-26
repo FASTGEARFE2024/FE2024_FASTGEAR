@@ -121,7 +121,7 @@ In obstacle race, our code first resets gyro sensor. After that it sets a variab
 
 If our robot did not see an obstacle, it centers itself and goes straight. Because there is a possibility that it deviates from its path, we use a PD with the gyro sensor.
 
-If our robot sees blue or orange lines, This means that the robot is at one of the corners of the lane. When that happens our robot turns for 60 degrees. and every 20 degrees it checks if pixycam can see an obstacle.
+If our robot sees blue or orange lines, It increases the round variable by 1.  When that happens our robot turns for 60 degrees. and every 20 degrees (while it turns) it checks if pixycam can see an obstacle.
 
 
 # <hr/>
